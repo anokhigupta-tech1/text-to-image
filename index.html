@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai image generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body >
+    <div class="container">
+      <!-- header section -->
+      <header class="header">
+        <div class="logo-wrapper">
+          <div class="logo">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h1>AI Image generator</h1>
+          
+        </div>
+        <button class="theme-toggle">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </header>
+
+      <div class="main-content">
+        <form action="#" class="prompt-form">
+          <!-- prompt container -->
+          <div class="prompt-container">
+            <textarea
+              class="prompt-input"
+              placeholder="Describe your imagination in details.."
+              required
+              autofocus
+            ></textarea>
+            <button type="button" class="prompt-btn">
+              <i class="fa-solid fa-dice"></i>
+            </button>
+          </div>
+          <!-- prompt actions -->
+          <div class="prompt-actions">
+            <div class="select-wrapper">
+              <select  class="custom-select" id="model-select" required>
+                <option value="" selected disabled>Select Model</option>
+                <option value="black-forest-labs/FLUX.1-dev">FLUX.1-dev</option>
+                <option value="black-forest-labs/FLUX.1-schnell">FLUX.1-schnell</option>
+                <option value="stabilityai/stable-diffusion-xl-base-1.0">Stable-Diffusion-XL</option>
+                <option value="runwayml/stable-diffusion-v1-5">Stable Diffusion v1.5</option>
+                <option value="promptthero/openjourney">Openjourney</option>
+              </select>
+            </div>
+
+
+              <div class="select-wrapper">
+              <select  class="custom-select" id="count-select" required>
+                <option value="" selected disabled>Image Count</option>
+                <option value="1">1 Image</option>
+                <option value="2">2 Image</option>
+                <option value="3">3 Image</option>
+                <option value="4">4 Image</option>
+                <option value="5">5 Image</option>
+              </select>
+            </div>
+
+             <div class="select-wrapper">
+              <select  class="custom-select" id="ratio-select" required>
+                <option value="" selected disabled>Aspect Ratio</option>
+                <option value="1/1">Square (1:1)</option>
+                <option value="16/9">Landscape(16/9)</option>
+                <option value="9/16">Portrait</option>
+               
+              </select>
+            </div>
+<button class="generate-btn" type="submit">
+    <i class="fa-solid fa-wand-sparkles">
+      
+    </i>
+      Generate
+</button>
+
+          </div>
+          
+          <!-- result -->
+
+          <div class="gallery-grid">
+            <!-- <div class="img-card loading">
+                <div class="status-container">
+                    <div class="spinner"></div>
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <p class="status-text">Generating...</p>
+                  </div>
+                <img src="image.png" class="result-img">
+                <div class="img-overlay">
+                    <button class="img-download-btn">
+                        <i class="fa-solid fa-download"></i>
+                    </button>
+                </div>
+            </div> -->
+               
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
